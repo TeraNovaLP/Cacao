@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cacao", "Cacao\Cacao.csproj", "{6737BF54-B7F7-4916-9BE6-DE7704C676F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cacao.Framework", "Cacao.Framework\Cacao.Framework.csproj", "{DA04E916-77FF-4249-9125-8A3BAE62F5C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cacao.Tests", "Cacao.Tests\Cacao.Tests.csproj", "{060F3EF6-3A4E-4B7C-8CFD-722E0351A00C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6737BF54-B7F7-4916-9BE6-DE7704C676F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6737BF54-B7F7-4916-9BE6-DE7704C676F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6737BF54-B7F7-4916-9BE6-DE7704C676F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6737BF54-B7F7-4916-9BE6-DE7704C676F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA04E916-77FF-4249-9125-8A3BAE62F5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA04E916-77FF-4249-9125-8A3BAE62F5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA04E916-77FF-4249-9125-8A3BAE62F5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA04E916-77FF-4249-9125-8A3BAE62F5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{060F3EF6-3A4E-4B7C-8CFD-722E0351A00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060F3EF6-3A4E-4B7C-8CFD-722E0351A00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060F3EF6-3A4E-4B7C-8CFD-722E0351A00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060F3EF6-3A4E-4B7C-8CFD-722E0351A00C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

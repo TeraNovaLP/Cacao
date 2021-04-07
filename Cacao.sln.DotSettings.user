@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=77362521_002D8ebd_002D4348_002Dba6b_002D116c93bd4905/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ForEach" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::060F3EF6-3A4E-4B7C-8CFD-722E0351A00C::.NETCoreApp,Version=v3.1::Cacao.Tests.Core.Extensions.EnumerableExtensionsTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b2a2027a_002D78b5_002D453d_002D99fb_002D7396a0f789d6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="RemoveDuplicatesBy" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::060F3EF6-3A4E-4B7C-8CFD-722E0351A00C::.NETCoreApp,Version=v3.1::Cacao.Tests.Core.Extensions.EnumerableExtensionsTests.RemoveDuplicatesBy&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::060F3EF6-3A4E-4B7C-8CFD-722E0351A00C::.NETCoreApp,Version=v3.1::Cacao.Tests.Core.Extensions.EnumerableExtensionsTests.ForEach&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
