@@ -7,9 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/dotnet/sdk:3.1-alpine
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: actions/setup-dotnet@v1
