@@ -9,6 +9,7 @@
         <Authors>TeraNovaLP</Authors>
         <Company />
         <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
