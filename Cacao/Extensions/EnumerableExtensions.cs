@@ -36,11 +36,8 @@ namespace Cacao.Extensions
 
             var batches = new List<IEnumerable<TSource>>();
 
-            int rounds = 0;
-
             for (int i = 0; i < batchCount; i++)
             {
-                rounds = rounds + 1;
                 batches.Add(entries.Skip(batchSize * i).Take(batchSize));
             }
 
