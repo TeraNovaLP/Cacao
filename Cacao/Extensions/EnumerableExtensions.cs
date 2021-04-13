@@ -24,5 +24,27 @@ namespace Cacao.Extensions
                 .GroupBy(keySelector)
                 .Select(x => x.First());
         }
+
+        public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(this IEnumerable<TSource> entries, int batchSize)
+        {
+            var batchCount = Math.DivRem(entries.Count(), batchSize, out var remain);
+
+            if (remain > 0)
+            {
+                batchCount++;
+            }
+
+            var batches = new List<IEnumerable<TSource>>();
+
+            int rounds = 0;
+
+            for (int i = 0; i < batchCount; i++)
+            {
+                rounds = rounds + 1;
+                batches.Add(entries.Skip(batchSize * i).Take(batchSize));
+            }
+
+            return batches;
+        }
     }
 }

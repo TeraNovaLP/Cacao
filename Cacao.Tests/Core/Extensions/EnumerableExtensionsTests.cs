@@ -23,5 +23,21 @@ namespace Cacao.Tests.Core.Extensions
 
             Assert.AreEqual(1, result.Count(x => x.key == 1));
         }
+
+        [TestMethod]
+        public void Batch()
+        {
+            var entries = new List<int>();
+
+            for (int i = 0; i < 45; i++)
+            {
+                entries.Add(i);
+            }
+
+            var batches = entries.Batch(20).ToList();
+
+            Assert.AreEqual(3, batches.Count);
+            Assert.AreEqual(5, batches.Last().Count());
+        }
     }
 }
