@@ -4,12 +4,13 @@
 
 using System;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
-namespace Cacao.Framework.Services
+namespace Cacao.Services
 {
     public abstract class IntervalService: BaseService
     {
-        protected IntervalService(IServiceScopeFactory serviceScope) : base(serviceScope)
+        protected IntervalService(IServiceScopeFactory serviceScope, ILoggerFactory logger) : base(serviceScope, logger)
         {
         }
 

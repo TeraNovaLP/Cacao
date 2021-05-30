@@ -7,16 +7,19 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace Cacao.Framework.Services
+namespace Cacao.Services
 {
     public abstract class BaseService: BackgroundService
     {
         private readonly IServiceScopeFactory serviceScope;
+        private readonly ILogger logger;
 
-        protected BaseService(IServiceScopeFactory serviceScope)
+        protected BaseService(IServiceScopeFactory serviceScope, ILoggerFactory logger)
         {
             this.serviceScope = serviceScope;
+            this.logger = logger.CreateLogger("Cacao.Services");
         }
 
         protected abstract bool DelayAtStartup { get; }
@@ -30,10 +33,14 @@ namespace Cacao.Framework.Services
 
             while (!stoppingToken.IsCancellationRequested)
             {
+                logger.LogInformation($"Executing {GetType().Name} ...");
+
                 using (var scope = serviceScope.CreateScope())
                 {
                     await Execute(scope);
                 }
+
+                logger.LogInformation("Finished!");
 
                 await Task.Delay(GetDelayUntilNextRun(), stoppingToken);
             }

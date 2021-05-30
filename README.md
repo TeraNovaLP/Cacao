@@ -7,8 +7,8 @@ Set of additions and utilities for .NET Core
 | Package | Compatibility | Description |
 | --- | --- | --- |
 | [Cacao](https://www.nuget.org/packages/Cacao/) | .NET Standard 2.0 | Core package with extensions and utilities |
-| [Cacao.Framework](https://www.nuget.org/packages/Cacao.Framework/) | .NET Core 3.1 | Additions for .NET Core and ASP Net Core |
+| [Cacao.Services](https://www.nuget.org/packages/Cacao.Services/) | .NET Core 3.1 | Additions for ASP Net Core hosted services |
 
-## API Documentation
+## API Reference
 * [Cacao](https://www.fuget.org/packages/Cacao)
-* [Cacao.Framework](https://www.fuget.org/packages/Cacao.Framework)
+* [Cacao.Services](https://www.fuget.org/packages/Cacao.Services)
