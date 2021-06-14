@@ -25,6 +25,9 @@ namespace Cacao.Extensions
                 .Select(x => x.First());
         }
 
+        /// <summary>
+        /// Batches the sequence into chunks of the given size.
+        /// </summary>
         public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(this IEnumerable<TSource> entries, int batchSize)
         {
             var batchCount = Math.DivRem(entries.Count(), batchSize, out var remain);
@@ -36,12 +39,28 @@ namespace Cacao.Extensions
 
             var batches = new List<IEnumerable<TSource>>();
 
-            for (int i = 0; i < batchCount; i++)
+            for (var i = 0; i < batchCount; i++)
             {
                 batches.Add(entries.Skip(batchSize * i).Take(batchSize));
             }
 
             return batches;
+        }
+
+        /// <summary>
+        /// Checks if all the given items are included.
+        /// </summary>
+        public static bool ContainsMany<T>(this IEnumerable<T> items1, IEnumerable<T> items2)
+        {
+            return items2.All(items1.Contains);
+        }
+
+        /// <summary>
+        /// Checks if all the given items are included.
+        /// </summary>
+        public static bool ContainsMany(this IEnumerable<string> items1, IEnumerable<string> items2, StringComparison comparison)
+        {
+            return items2.All(x => items1.Any(y => y.Equals(x, comparison)));
         }
     }
 }
