@@ -62,5 +62,22 @@ namespace Cacao.Extensions
         {
             return items2.All(x => items1.Any(y => y.Equals(x, comparison)));
         }
+
+
+        /// <summary>
+        /// Filters and transforms the elements of a sequence.
+        /// </summary>
+        /// <param name="selector">Property selector</param>
+        /// <param name="predicate">Transformation</param>
+        public static IEnumerable<TResult> SelectWhere<TSource, TResult>(this IEnumerable<TSource> items, Func<TSource, TResult> selector, Func<TSource, bool> predicate)
+        {
+            foreach (var item in items)
+            {
+                if (predicate(item))
+                {
+                    yield return selector(item);
+                }
+            }
+        }
     }
 }
