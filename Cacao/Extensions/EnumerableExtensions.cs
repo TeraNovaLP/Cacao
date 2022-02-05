@@ -65,17 +65,19 @@ namespace Cacao.Extensions
 
 
         /// <summary>
-        /// Filters and transforms the elements of a sequence.
+        /// Transforms the elements of a sequence and filters it afterwards.
         /// </summary>
         /// <param name="selector">Property selector</param>
-        /// <param name="predicate">Transformation</param>
-        public static IEnumerable<TResult> SelectWhere<TSource, TResult>(this IEnumerable<TSource> items, Func<TSource, TResult> selector, Func<TSource, bool> predicate)
+        /// <param name="filter">Filter condition</param>
+        public static IEnumerable<TResult> SelectWhere<TSource, TResult>(this IEnumerable<TSource> items, Func<TSource, TResult> selector, Func<TResult, bool> filter)
         {
             foreach (var item in items)
             {
-                if (predicate(item))
+                var value = selector(item);
+
+                if (filter(value))
                 {
-                    yield return selector(item);
+                    yield return value;
                 }
             }
         }
